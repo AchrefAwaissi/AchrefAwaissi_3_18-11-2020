@@ -1,0 +1,244 @@
+$text1-margin:10px;
+$padding30:15px;
+@import"libs/mixins.scss";
+.images1
+{
+    width:300px;
+    height: 130px;
+    object-fit: cover;
+    border-top-right-radius: 17px ;
+    border-top-left-radius: 17px ;
+}
+#mapage
+{
+    max-width: 400px;
+    border: 1px solid green;
+}
+body
+{
+    @include centerrow;
+}
+.h1
+{
+    text-align: center;
+    word-wrap: break-word;
+    font-family: 'Shrikhand', cursive;
+
+    
+}
+
+.P
+{
+    text-align: center;
+    word-wrap: break-word;  
+    font-size: 18px;
+    background-color:#eef1f5;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.btn1
+{
+    border: none;
+    background-color: #99E2D0;
+    
+}
+
+.header-container
+{
+    @include centerrow; 
+    border: 1px solid red;
+    .header-container__logo1
+    {
+        width: 211px;
+        height: 46px;
+        padding-top:20px;
+    }
+}
+.btn
+{
+   padding: $padding30;
+   border-radius: 20px;
+   border: none;
+   color: white;
+   background-image:linear-gradient(to right,
+   #FF79DA,
+   #9356DC);
+   cursor: pointer;
+   overflow: hidden;
+   transition-duration: 400ms;
+   transform: scale(1);
+   &:hover {
+       transform: scale(1.1);     
+   }
+}
+
+.resto-search
+{
+    @include centerrow;
+    border: pink 3px solid;
+    background-color: rgb(233, 229, 229);
+    padding:$padding30;
+  &__map
+   {
+    margin-right: 20px;   
+   }
+   }
+   .bouton
+   {
+    @include centerrow;
+    }
+    
+     .Restaurant
+     {
+         align-self: center;
+         border: 2px solid greenyellow;
+
+     }
+     .Restaurent__number
+     {
+        position: absolute;
+        top: 1.2rem;
+ right: 21rem;
+ background-color: #9356DC ;
+ width: 20px;
+ height: 20px;
+ border-radius: 50%; 
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: none; 
+
+     }
+     .Restaurant__mobile
+     {
+        @include Restaurant__mobile;
+        @include hovercase;
+        position: relative;
+
+         
+
+         .texte1
+         {
+             margin-left:$text1-margin;
+         }
+.ICON:hover
+{
+color: #9356DC;
+}
+     }
+     .Menu
+     {
+         @extend .Restaurant
+     }
+     .Degustez
+     {
+        @extend .Restaurant
+
+     }
+    .Menu__menu1
+    {
+        @extend.Restaurant__mobile;
+        .p1
+        {
+            margin-left:$text1-margin;
+        }
+        
+    }
+    .Degustez__menu1
+    {
+        @extend.Restaurant__mobile;
+        .p1
+        {
+            margin-left:$text1-margin;
+        }
+    }
+     section
+     {
+         border: 2px solid red;
+     }
+     .case1
+     {
+    @include case1;
+    @include hovercase;
+
+  
+     }
+     footer
+     {
+         background-color: rgb(43, 42, 42);
+         color: white;
+         padding-bottom: 0;
+     .foot
+{
+font-family: 'Shrikhand', cursive;
+margin-left: 37px;
+display: block;
+margin-top: 15px;
+}
+ ul li
+ {
+     list-style-type: none;
+ }
+     a
+    {
+        text-decoration: none;
+        color: white;
+    }
+}
+.btn1
+{
+    position: absolute;
+    padding:5px;
+    margin-top: 15px;
+    margin-right: 10px;  
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms; 
+    @include hoverboutonpetitee;  
+}
+.Btn-conteneur
+{
+@include row-end;
+}
+.context1
+{
+    border: 1px solid violet;
+    @include row-spacebetween;
+
+
+.context1__text2
+{
+    margin-left: 10px;
+}
+}
+.heart
+{
+    padding-top: 20px;
+    
+}
+.Iconheart
+{
+    @include row-end;
+    border: 1px solid violet;
+    font-size: 23px;
+}
+.text1
+{
+    padding-left: 10px;
+}
+.section1
+{
+@include centercolumn;
+
+}
+.cont
+{
+    @include centercolumn;
+    border: 2px solid rebeccapurple;
+
+}
+
+
+
