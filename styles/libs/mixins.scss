@@ -27,8 +27,6 @@
     margin: 10px;
     background-color:#f2f2f2;
     width: 300px;
-    border: 2px solid blue;
-    transform: scale(1);
     transition-property: transform;
     transition-duration: 400ms; 
     
@@ -42,9 +40,7 @@
     align-items: center;
     align-self: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
-   border: 3px solid greenyellow;
     margin-bottom: 10px; 
-    transform: scale(1);
     transition-property: transform;
     transition-duration: 400ms;   
 }
@@ -60,9 +56,7 @@
 }
 @mixin hovercase {
     
-    &:hover {
-        transform: scale(1.1);
-    }  
+   
 
 }
 @mixin hoverboutonpetite {
@@ -101,8 +95,6 @@
     margin: 10px;
     background-color:#f2f2f2;
     width: 300px;
-    border: 2px solid blue;
-    transform: scale(1);
     transition-property: transform;
     transition-duration: 400ms; 
     
@@ -116,9 +108,7 @@
     align-items: center;
     align-self: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
-   border: 3px solid greenyellow;
     margin-bottom: 10px; 
-    transform: scale(1);
     transition-property: transform;
     transition-duration: 400ms;   
 }
@@ -130,7 +120,6 @@
     border-radius: 17px;
     align-self: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
-    transform: scale(1);
     transition-property: transform;
 cursor: pointer;
     transition-duration: 200ms;  
@@ -141,7 +130,6 @@ cursor: pointer;
 @mixin hovercase {
     
     &:hover {
-        transform: scale(1.2);
         transition-duration: 400ms;   
 
     }  

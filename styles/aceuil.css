@@ -9,12 +9,16 @@
 
 #mapage {
   max-width: 400px;
-  border: 1px solid green;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 
 body {
+  font-family: Roboto,sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+  width: auto;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -28,14 +32,12 @@ body {
 .h1 {
   text-align: center;
   word-wrap: break-word;
-  font-family: 'Shrikhand', cursive;
 }
 
 .P {
   text-align: center;
   word-wrap: break-word;
   font-size: 18px;
-  background-color: #eef1f5;
 }
 
 a {
@@ -59,7 +61,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid red;
 }
 
 .header-container .header-container__logo1 {
@@ -69,23 +70,20 @@ a {
 }
 
 .btn {
-  padding: 15px;
-  border-radius: 20px;
-  border: none;
-  color: white;
-  background-image: -webkit-gradient(linear, left top, right top, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(to right, #FF79DA, #9356DC);
+  border: 0;
+  padding: .75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.9)), to(rgba(255, 121, 218, 0.9)));
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
-  overflow: hidden;
-  -webkit-transition-duration: 400ms;
-          transition-duration: 400ms;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.btn:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 
 .resto-search {
@@ -99,7 +97,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: pink 3px solid;
   background-color: #e9e5e5;
   padding: 15px;
 }
@@ -125,7 +122,6 @@ a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  border: 2px solid greenyellow;
 }
 
 .Restaurent__number {
@@ -161,9 +157,6 @@ a {
   margin: 10px;
   background-color: #f2f2f2;
   width: 300px;
-  border: 2px solid blue;
-  -webkit-transform: scale(1);
-          transform: scale(1);
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -171,13 +164,6 @@ a {
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
   position: relative;
-}
-
-.Restaurant__mobile:hover, .Menu__menu1:hover, .Degustez__menu1:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition-duration: 400ms;
-          transition-duration: 400ms;
 }
 
 .Restaurant__mobile .texte1, .Menu__menu1 .texte1, .Degustez__menu1 .texte1 {
@@ -197,7 +183,7 @@ a {
 }
 
 section {
-  border: 2px solid red;
+  background-color: #f2f2f2;
 }
 
 .case1 {
@@ -213,21 +199,11 @@ section {
       align-self: center;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  border: 3px solid greenyellow;
   margin-bottom: 10px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 400ms;
-          transition-duration: 400ms;
-}
-
-.case1:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
 }
@@ -247,6 +223,7 @@ footer .foot {
 
 footer ul li {
   list-style-type: none;
+  padding: 3px;
 }
 
 footer a {
@@ -287,7 +264,6 @@ footer a {
 }
 
 .context1 {
-  border: 1px solid violet;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,7 +295,6 @@ footer a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  border: 1px solid violet;
   font-size: 23px;
 }
 
@@ -351,6 +326,5 @@ footer a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 2px solid rebeccapurple;
 }
 /*# sourceMappingURL=aceuil.css.map */

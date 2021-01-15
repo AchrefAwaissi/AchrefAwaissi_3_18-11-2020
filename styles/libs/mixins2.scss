@@ -106,10 +106,21 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
     
 }
-@mixin hovercase {
-    
-    &:hover {
-        transform: scale(1.1);
-    }  
 
+@mixin section1 {
+    background-color:#f2f2f2;
+    border-radius: 30px;
+    height: auto;
+    border: 2px solid red;
+    position: relative;
+    top: -2rem;
+    
+}
+@mixin footer 
+{
+    background-color: rgb(43, 42, 42);
+    color: white;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
 }

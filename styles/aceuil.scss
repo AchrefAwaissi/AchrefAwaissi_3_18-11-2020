@@ -12,27 +12,26 @@ $padding30:15px;
 #mapage
 {
     max-width: 400px;
-    border: 1px solid green;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0,0,0,.25);
+
 }
 body
 {
-    @include centerrow;
+        font-family: Roboto,sans-serif;
+        display: flex;
+        width: auto;
+@include centerrow;
 }
 .h1
 {
     text-align: center;
-    word-wrap: break-word;
-    font-family: 'Shrikhand', cursive;
-
-    
+    word-wrap: break-word;    
 }
-
 .P
 {
     text-align: center;
     word-wrap: break-word;  
     font-size: 18px;
-    background-color:#eef1f5;
 }
 a{
     text-decoration: none;
@@ -48,7 +47,6 @@ a{
 .header-container
 {
     @include centerrow; 
-    border: 1px solid red;
     .header-container__logo1
     {
         width: 211px;
@@ -58,26 +56,23 @@ a{
 }
 .btn
 {
-   padding: $padding30;
-   border-radius: 20px;
-   border: none;
-   color: white;
-   background-image:linear-gradient(to right,
-   #FF79DA,
-   #9356DC);
-   cursor: pointer;
-   overflow: hidden;
-   transition-duration: 400ms;
-   transform: scale(1);
-   &:hover {
-       transform: scale(1.1);     
-   }
+    border: 0;
+    padding: .75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor: pointer;
+    transition-duration: .25s;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0,0,0,.25);
+   
 }
 
 .resto-search
 {
     @include centerrow;
-    border: pink 3px solid;
     background-color: rgb(233, 229, 229);
     padding:$padding30;
   &__map
@@ -93,7 +88,6 @@ a{
      .Restaurant
      {
          align-self: center;
-         border: 2px solid greenyellow;
 
      }
      .Restaurent__number
@@ -114,7 +108,6 @@ a{
      .Restaurant__mobile
      {
         @include Restaurant__mobile;
-        @include hovercase;
         position: relative;
 
          
@@ -156,12 +149,11 @@ color: #9356DC;
     }
      section
      {
-         border: 2px solid red;
+         background-color: #f2f2f2;
      }
      .case1
      {
     @include case1;
-    @include hovercase;
 
   
      }
@@ -180,6 +172,7 @@ margin-top: 15px;
  ul li
  {
      list-style-type: none;
+     padding: 3px;
  }
      a
     {
@@ -204,7 +197,6 @@ margin-top: 15px;
 }
 .context1
 {
-    border: 1px solid violet;
     @include row-spacebetween;
 
 
@@ -221,7 +213,6 @@ margin-top: 15px;
 .Iconheart
 {
     @include row-end;
-    border: 1px solid violet;
     font-size: 23px;
 }
 .text1
@@ -236,7 +227,6 @@ margin-top: 15px;
 .cont
 {
     @include centercolumn;
-    border: 2px solid rebeccapurple;
 
 }
 

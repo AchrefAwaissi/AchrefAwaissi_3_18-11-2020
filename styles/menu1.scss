@@ -57,10 +57,7 @@ height: 333px;}
 
 footer
 {
-    background-color: rgb(43, 42, 42);
-    color: white;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    @include footer;
     border: 1px solid greenyellow;
 .foot
 {
@@ -72,6 +69,8 @@ margin-top: 15px;
 ul li
 {
     list-style-type: none;
+    padding: 3px;
+
 }
     a
    {
@@ -117,12 +116,7 @@ h3    {
 }
 .section1
 {
-    background-color:#f2f2f2;
-    border-radius: 30px;
-    height: auto;
-    border: 2px solid red;
-    position: relative;
-    top: -2rem;
+@include section1;
 
     }
 
@@ -133,6 +127,8 @@ h3    {
     @include case1menu;
     margin-bottom: 10px;
     animation: translation 3s;
+    transition-duration: 300ms;   
+
     @include hovercase;
     
 

@@ -94,6 +94,7 @@ footer .foot {
 
 footer ul li {
   list-style-type: none;
+  padding: 3px;
 }
 
 footer a {
@@ -192,6 +193,8 @@ footer a {
   margin-bottom: 10px;
   -webkit-animation: translation 3s;
           animation: translation 3s;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
 }
 
 .cont1:hover {
