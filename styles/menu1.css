@@ -1,5 +1,4 @@
 #mapage {
-  width: 400px;
   height: auto;
   border: 1px solid green;
 }
@@ -15,13 +14,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "Roboto",sans-serif;
 }
 
 .images1 {
   width: 400px;
   height: 140px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   scroll-behavior: unset;
   height: 333px;
 }
@@ -163,12 +163,16 @@ footer a {
 }
 
 .section1 {
-  background-color: #f2f2f2;
-  border-radius: 30px;
-  height: auto;
-  border: 2px solid red;
-  position: relative;
-  top: -2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .cont1 {
@@ -197,11 +201,6 @@ footer a {
           transition-duration: 300ms;
 }
 
-.cont1:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .cont1 .cont1__titlecase {
   margin-left: 10px;
 }
@@ -217,8 +216,7 @@ footer a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-right: 30px;
-  margin-bottom: 15px;
+  margin-top: 50px;
 }
 
 .text {
@@ -242,17 +240,40 @@ footer a {
   margin-top: 15px;
 }
 
+.bouton button :after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.bouton button:hover {
+  background-color: #f7c2f9;
+}
+
+.bouton button:hover {
+  opacity: 1;
+  right: 0;
+}
+
 .btn {
-  background-color: #FF79DA;
-  padding: 15px;
-  margin: 13px;
-  border-radius: 20px;
-  border: none;
-  color: white;
+  border: 0;
+  padding: .75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.9)), to(rgba(255, 121, 218, 0.9)));
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
-  background-image: -webkit-gradient(linear, left top, right top, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(to right, #FF79DA, #9356DC);
-  padding: 15px 30px 15px 30px;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 
 @-webkit-keyframes translation {
@@ -278,6 +299,63 @@ footer a {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+.text {
+  margin: 20px;
+  display: block;
+}
+
+.text h3 {
+  font-family: 'Shrikhand', cursive;
+}
+
+.cont1 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media all and (min-width: 740px) {
+  .all {
+    border: 3px solid orange;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body {
+    width: 100%;
+  }
+  #mapage {
+    width: 100%;
+  }
+  .images1 {
+    width: 100%;
+  }
+  .cont1 {
+    width: 400px;
+  }
+  span {
+    display: block;
+    margin: 10px;
+  }
+  .containercont1 {
+    border: 2px solid greenyellow;
+  }
+  .containercont2 {
+    border: 2px solid greenyellow;
+  }
+  .containercont3 {
+    border: 2px solid greenyellow;
   }
 }
 /*# sourceMappingURL=menu1.css.map */

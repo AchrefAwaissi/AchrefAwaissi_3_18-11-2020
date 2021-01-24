@@ -18,7 +18,7 @@
     flex-direction: row;
     justify-content: space-between;  
 }
-@mixin Restaurant__mobile {
+@mixin cont__Restaurant__mobile {
     border:none;
     border-radius: 17px;
     display: flex;
@@ -85,7 +85,7 @@
     flex-direction: row;
     justify-content: space-between;  
 }
-@mixin Restaurant__mobile {
+@mixin cont__Restaurant__mobile {
     cursor: pointer;
     border:none;
     border-radius: 17px;
@@ -139,4 +139,9 @@ cursor: pointer;
     
     &:hover {
 opacity: 1;    }  
+}
+@mixin centerrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
 }

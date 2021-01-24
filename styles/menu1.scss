@@ -3,23 +3,25 @@ $padding30:15px;
 @import"libs/mixins2.scss";
 #mapage
 {
-    width: 400px;
     height: auto;
     border: 1px solid green;
 }
     body
     {
         @include centerrow;
+        font-family: "Roboto",sans-serif;
+
         
     }
 
-.images1
-{
-    width: 400px;
-    height: 140px;
-    object-fit: cover;
-scroll-behavior: unset;
-height: 333px;}
+    .images1 {
+        width: 400px;
+        height: 140px;
+        -o-object-fit: cover;
+           object-fit: cover;
+        scroll-behavior: unset;
+        height: 333px;
+      }
 .header-container__logo1
 {
     width: 211px;
@@ -129,20 +131,20 @@ h3    {
     animation: translation 3s;
     transition-duration: 300ms;   
 
-    @include hovercase;
     
 
     .cont1__titlecase
     {
-     margin-left: 10px;    
+     margin-left: 10px;   
+ 
+
     }
     .cont1__prix1
     {
-        display: flex;
-        flex-direction: column;
-        justify-content:flex-end;
-        margin-right: 30px;
-        margin-bottom: 15px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+        margin-top: 50px;
     }
 }
 
@@ -158,21 +160,38 @@ h3    {
 {
  @include centerrow;
  margin-top: $padding30;
+ button :after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    }
+    button:hover {
+    background-color: #f7c2f9;
+    }
+    
+    button:hover  {
+    opacity: 1;
+    right: 0;
+    }
+  
  }
  .btn
 {
-   background-color: #FF79DA ;
-   padding: $padding30;
-   margin: 13px;
-   border-radius: 20px;
-   border: none;
-   color: white;
-   cursor: pointer;
-   background-image:linear-gradient(to right,
-   #FF79DA,
-   #9356DC);
-   padding: 15px 30px 15px 30px;
- 
+        border: 0;
+        padding: .75rem 1.5rem;
+        font-weight: 500;
+        font-size: 1.1rem;
+        border-radius: 100px;
+        color: #fff;
+        background-color: #686868;
+        background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+        cursor: pointer;
+        transition-duration: .25s;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0,0,0,.25);
+    
 }
 @keyframes translation {
     from{
@@ -184,4 +203,65 @@ transform: translateY(100px);opacity: 0;    }
 
 
     }
+}
+.text
+{
+    margin: 20px;
+    display: block;
+    
+h3    {
+    font-family: 'Shrikhand', cursive;
+
+    }
+}
+.cont1
+{
+    align-items: center;
+    align-self: center;
+}
+
+@media all and (min-width: 740px) 
+{
+
+.all
+{
+  border: 3px solid orange;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body
+{
+  width: 100%;
+}
+#mapage
+{
+  width: 100%
+}
+.images1
+{
+  width: 100%;
+}
+.cont1
+{
+  width: 400px;
+  }
+span{
+  display: block;
+  margin: 10px;
+}
+.containercont1
+{
+  border: 2px solid greenyellow;
+}
+.containercont2
+{
+    border: 2px solid greenyellow;
+
+}
+.containercont3
+{
+    border: 2px solid greenyellow;
+
+}
 }
