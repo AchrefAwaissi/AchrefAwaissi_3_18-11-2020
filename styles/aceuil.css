@@ -1,20 +1,10 @@
-.images1 {
-  width: 300px;
-  height: 130px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-top-right-radius: 17px;
-  border-top-left-radius: 17px;
-}
-
 #mapage {
-  max-width: 400px;
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 
 body {
-  font-family: Roboto,sans-serif;
+  font-family: "Roboto",sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,6 +17,15 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.images1 {
+  width: 300px;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-right-radius: 17px;
+  border-top-left-radius: 17px;
 }
 
 .h1 {
@@ -43,6 +42,27 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+.btnG :after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.btnG:hover {
+  background-color: #f7c2f9;
+}
+
+.btnG:hover {
+  opacity: 2;
+  right: 0;
+  -webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn1 {
@@ -69,7 +89,7 @@ a {
   padding-top: 20px;
 }
 
-.btn {
+.btnG {
   border: 0;
   padding: .75rem 1.5rem;
   font-weight: 500;
@@ -118,13 +138,13 @@ a {
           justify-content: center;
 }
 
-.Restaurant, .Menu, .Degustez {
+.cont__Restaurant, .cont__Menu, .cont__Degustez {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.Restaurent__number {
+.cont__Restaurent__number {
   position: absolute;
   top: 1.2rem;
   right: 21rem;
@@ -144,7 +164,7 @@ a {
   border: none;
 }
 
-.Restaurant__mobile, .Menu__menu1, .Degustez__menu1 {
+.cont__Restaurant__mobile, .cont__Menu__menu1, .cont__Degustez__menu1 {
   cursor: pointer;
   border: none;
   border-radius: 17px;
@@ -166,19 +186,19 @@ a {
   position: relative;
 }
 
-.Restaurant__mobile .texte1, .Menu__menu1 .texte1, .Degustez__menu1 .texte1 {
+.cont__Restaurant__mobile .texte1, .cont__Menu__menu1 .texte1, .cont__Degustez__menu1 .texte1 {
   margin-left: 10px;
 }
 
-.Restaurant__mobile .ICON:hover, .Menu__menu1 .ICON:hover, .Degustez__menu1 .ICON:hover {
+.cont__Restaurant__mobile .ICON:hover, .cont__Menu__menu1 .ICON:hover, .cont__Degustez__menu1 .ICON:hover {
   color: #9356DC;
 }
 
-.Menu__menu1 .p1 {
+.cont__Menu__menu1 .p1 {
   margin-left: 10px;
 }
 
-.Degustez__menu1 .p1 {
+.cont__Degustez__menu1 .p1 {
   margin-left: 10px;
 }
 
@@ -282,6 +302,55 @@ footer a {
 
 .heart {
   padding-top: 20px;
+  font-size: 29px;
+}
+
+.heart1 {
+  padding-top: 20px;
+  font-size: 29px;
+}
+
+.heart1 {
+  color: violet;
+  cursor: pointer;
+  display: block;
+  font-size: 25px;
+  opacity: 0;
+  right: 27px;
+  top: 2px;
+  bottom: 3px;
+  position: relative;
+}
+
+.heart1:hover {
+  opacity: 1;
+  background-color: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  -webkit-animation: heart 3s;
+          animation: heart 3s;
+}
+
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 2;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 2;
+  }
 }
 
 .Iconheart {
@@ -326,5 +395,80 @@ footer a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 2px solid red;
+}
+
+.allcases {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media all and (min-width: 980px) {
+  .cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .cont:hover {
+    -webkit-filter: brightness(1.5);
+            filter: brightness(1.5);
+  }
+  .header-container {
+    width: 100%;
+    border: 2px solid green;
+  }
+  body {
+    width: 100%;
+    border: 2px solid red;
+  }
+  #mapage {
+    width: 100%;
+    border: 2px solid blue;
+    padding: 0;
+    margin: 0;
+  }
+  .section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .allcases {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 5px;
+  }
+  .case1 {
+    width: 600px;
+  }
+  .images1 {
+    width: 600px;
+  }
 }
 /*# sourceMappingURL=aceuil.css.map */

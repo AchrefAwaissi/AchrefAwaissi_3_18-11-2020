@@ -1,27 +1,25 @@
 $text1-margin:10px;
 $padding30:15px;
 @import"libs/mixins.scss";
-.images1
-{
-    width:300px;
-    height: 130px;
-    object-fit: cover;
-    border-top-right-radius: 17px ;
-    border-top-left-radius: 17px ;
-}
 #mapage
 {
-    max-width: 400px;
     box-shadow: 0.25rem 0.25rem 10px rgba(0,0,0,.25);
 
 }
 body
 {
-        font-family: Roboto,sans-serif;
+        font-family: "Roboto",sans-serif;
         display: flex;
         width: auto;
 @include centerrow;
 }
+.images1 {
+    width: 300px;
+    height: 130px;
+    object-fit: cover;
+    border-top-right-radius: 17px;
+    border-top-left-radius: 17px;
+  }
 .h1
 {
     text-align: center;
@@ -37,6 +35,25 @@ a{
     text-decoration: none;
     color: black;
 }
+
+ .btnG :after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 1s;
+    }
+    .btnG:hover {
+    background-color: #f7c2f9;
+    }
+    
+    .btnG:hover  {
+    opacity: 2;
+    right: 0;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, .2);
+
+    }
 .btn1
 {
     border: none;
@@ -54,7 +71,7 @@ a{
         padding-top:20px;
     }
 }
-.btn
+.btnG
 {
     border: 0;
     padding: .75rem 1.5rem;
@@ -85,12 +102,12 @@ a{
     @include centerrow;
     }
     
-     .Restaurant
+     .cont__Restaurant
      {
          align-self: center;
 
      }
-     .Restaurent__number
+     .cont__Restaurent__number
      {
         position: absolute;
         top: 1.2rem;
@@ -105,9 +122,9 @@ a{
  border: none; 
 
      }
-     .Restaurant__mobile
+     .cont__Restaurant__mobile
      {
-        @include Restaurant__mobile;
+        @include cont__Restaurant__mobile;
         position: relative;
 
          
@@ -121,27 +138,29 @@ a{
 color: #9356DC;
 }
      }
-     .Menu
+     .cont__Menu
      {
-         @extend .Restaurant
+         @extend .cont__Restaurant
+         
+         
      }
-     .Degustez
+     .cont__Degustez
      {
-        @extend .Restaurant
+        @extend .cont__Restaurant
 
      }
-    .Menu__menu1
+    .cont__Menu__menu1
     {
-        @extend.Restaurant__mobile;
+        @extend.cont__Restaurant__mobile;
         .p1
         {
             margin-left:$text1-margin;
         }
         
     }
-    .Degustez__menu1
+    .cont__Degustez__menu1
     {
-        @extend.Restaurant__mobile;
+        @extend.cont__Restaurant__mobile;
         .p1
         {
             margin-left:$text1-margin;
@@ -203,12 +222,55 @@ margin-top: 15px;
 .context1__text2
 {
     margin-left: 10px;
+
 }
 }
 .heart
 {
     padding-top: 20px;
+    font-size: 29px;
+
     
+}
+.heart1
+{
+    padding-top: 20px;
+    font-size: 29px;
+    
+}
+.heart1
+{
+    color: violet;
+    cursor: pointer;
+    display: block;
+    font-size: 25px;
+    opacity: 0;
+    right: 27px;
+    top: 2px;
+    bottom: 3px;
+     position: relative;
+    
+
+
+}
+.heart1:hover {
+  opacity: 1;       
+  background-color: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  animation: heart 3s ;
+
+}
+@keyframes heart {
+  0% {
+    opacity: 0.5;
+  }
+  60%{
+    opacity: 1;
+
+
+  }
+  100%{
+    opacity: 2;
+  }
 }
 .Iconheart
 {
@@ -227,8 +289,67 @@ margin-top: 15px;
 .cont
 {
     @include centercolumn;
+    border: 2px solid red;
 
 }
+.allcases
+{
+    align-items: center;
+    align-self: center;
+}
+@media all and (min-width: 980px) 
+{
+.cont
+{
+display: flex;
+justify-content: center;
+flex-direction: row;
+}
+.cont:hover
+{
+	filter: brightness(1.5);
+}
+.header-container
+{
+    width:100%;
+    border: 2px solid green;
+}
+body
+{
+        width:100%;
+            border: 2px solid red;
 
 
+}
+#mapage
+{
+           width:100%;
+               border: 2px solid blue;
+               padding: 0;
+               margin: 0;
 
+ 
+}
+.section1
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.allcases{
+     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5px;
+
+}
+.case1
+{
+width: 600px;
+}
+.images1
+{
+width: 600px;
+}
+}
