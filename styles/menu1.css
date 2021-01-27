@@ -136,6 +136,7 @@ footer a {
 
 .heart {
   padding-top: 20px;
+  font-size: 29px;
 }
 
 .Iconheart {
@@ -280,6 +281,25 @@ footer a {
 .btn .btn:hover {
   -webkit-filter: brightness(1.5);
           filter: brightness(1.5);
+}
+
+.heart1 {
+  padding-top: 20px;
+  color: violet;
+  cursor: pointer;
+  display: block;
+  font-size: 25px;
+  right: 27px;
+  bottom: 2px;
+  position: relative;
+  opacity: 0;
+}
+
+.heart1:hover {
+  opacity: 1;
+  background-color: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  -webkit-animation: heart 4s;
+          animation: heart 4s;
 }
 
 @-webkit-keyframes translation {
