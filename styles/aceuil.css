@@ -44,6 +44,164 @@ a {
   color: black;
 }
 
+.chargement {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background: white;
+  -webkit-animation: chargement 4s forwards;
+          animation: chargement 4s forwards;
+}
+
+@-webkit-keyframes chargement {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes chargement {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+.titleone {
+  background: -webkit-linear-gradient(#FF79DA, #99E2D0), #9356DC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 100px;
+  text-align: center;
+  display: block;
+  font-size: 55px;
+  font-family: 'Shrikhand', cursive;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list {
+  width: 40px;
+  height: 40px;
+  background: #ff66b3;
+  margin: 0 3px;
+  border-radius: 50%;
+  -webkit-animation: animate 2.5s forwards;
+          animation: animate 2.5s forwards;
+  -webkit-animation-iteration-count: 8;
+          animation-iteration-count: 8;
+}
+
+@-webkit-keyframes load {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes load {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@-webkit-keyframes animate {
+  0%, 40%, 100% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes animate {
+  0%, 40%, 100% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.list:nth-child(1) {
+  background: #66b3ff;
+  -webkit-box-shadow: 0 0 50px #66b3ff;
+          box-shadow: 0 0 50px #66b3ff;
+}
+
+.list:nth-child(2) {
+  background: #ff79da;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-box-shadow: 0 0 50px #ff79da;
+          box-shadow: 0 0 50px #ff79da;
+}
+
+.list:nth-child(3) {
+  background: #9356dc;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-box-shadow: 0 0 50px #9356dc;
+          box-shadow: 0 0 50px #9356dc;
+}
+
+.list:nth-child(4) {
+  background: #99e2d0;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-box-shadow: 0 0 50px #99e2d0;
+          box-shadow: 0 0 50px #99e2d0;
+}
+
+.list:nth-child(5) {
+  background: #66b3ff;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-box-shadow: 0 0 50px #66b3ff;
+          box-shadow: 0 0 50px #66b3ff;
+}
+
+.list:nth-child(6) {
+  background: #ff79da;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-box-shadow: 0 0 50px #ff79da;
+          box-shadow: 0 0 50px #ff79da;
+}
+
 .btnG :after {
   content: '\00bb';
   position: absolute;
@@ -307,7 +465,7 @@ footer a {
 
 .heart {
   padding-top: 20px;
-  font-size: 29px;
+  font-size: 27px;
 }
 
 .heart1 {
@@ -319,17 +477,19 @@ footer a {
   color: violet;
   cursor: pointer;
   display: block;
-  font-size: 25px;
+  font-size: 29px;
   opacity: 0;
-  right: 27px;
-  top: 2px;
+  right: 28px;
+  top: -1.5px;
   bottom: 3px;
   position: relative;
 }
 
 .heart1:hover {
   opacity: 1;
-  background-color: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   -webkit-animation: heart 3s;
           animation: heart 3s;
 }
@@ -400,7 +560,6 @@ footer a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 2px solid red;
 }
 
 .allcases {
@@ -427,15 +586,12 @@ footer a {
   }
   .header-container {
     width: 100%;
-    border: 2px solid green;
   }
   body {
     width: 100%;
-    border: 2px solid red;
   }
   #mapage {
     width: 100%;
-    border: 2px solid blue;
     padding: 0;
     margin: 0;
   }

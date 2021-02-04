@@ -31,6 +31,115 @@ a{
     text-decoration: none;
     color: black;
 }
+.chargement {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background: white;
+  animation: chargement 4s forwards;
+}
+
+@keyframes chargement {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.titleone{
+  background: -webkit-linear-gradient(#FF79DA ,#99E2D0),#9356DC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 100px;
+  text-align: center;
+  display: block;
+  font-size: 55px;
+font-family: 'Shrikhand', cursive;
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  width: 40px;
+  height: 40px;
+  background: #ff66b3;
+  margin: 0 3px;
+  border-radius: 50%;
+  animation: animate 2.5s forwards;
+  animation-iteration-count: 8;
+}
+
+
+@keyframes load {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes animate {
+  0%,40%,100%
+   {
+transform: scale(0.2);}
+  20% {
+transform: scale(1);  }
+
+}
+.list:nth-child(1) {
+  background: #66b3ff;
+  box-shadow: 0 0 50px #66b3ff; 
+}
+
+.list:nth-child(2) {
+  background: #ff79da;
+  animation-delay: 0.1s;
+    box-shadow: 0 0 50px #ff79da; 
+
+}
+
+.list:nth-child(3) {
+  background: #9356dc;
+  animation-delay: 0.2s;
+      box-shadow: 0 0 50px #9356dc; 
+
+}
+
+.list:nth-child(4) {
+  background: #99e2d0;
+  animation-delay: 0.3s;
+        box-shadow: 0 0 50px #99e2d0; 
+
+}
+
+.list:nth-child(5) {
+  background: #66b3ff;
+  animation-delay: 0.4s;
+          box-shadow: 0 0 50px #66b3ff; 
+
+}
+
+.list:nth-child(6) {
+  background: #ff79da;
+  animation-delay: 0.5s;
+            box-shadow: 0 0 50px #ff79da; 
+
+}
+
+
+
 
  .btnG :after {
     content: '\00bb';
@@ -84,6 +193,7 @@ a{
     @include centerrow;
     background-color: rgb(233, 229, 229);
     padding:$padding30;
+
   &__map
    {
     margin-right: 20px;   
@@ -175,6 +285,7 @@ color: #9356DC;
          padding-bottom: 0;
      .foot
 {
+  
 font-family: 'Shrikhand', cursive;
 margin-left: 37px;
 display: block;
@@ -220,7 +331,7 @@ margin-top: 15px;
 .heart
 {
     padding-top: 20px;
-    font-size: 29px;
+    font-size: 27px;
 
     
 }
@@ -232,13 +343,13 @@ margin-top: 15px;
 }
 .heart1
 {
-    color: violet;
-    cursor: pointer;
-    display: block;
-    font-size: 25px;
+  color: violet;
+  cursor: pointer;
+  display: block;
+    font-size: 29px;
     opacity: 0;
-    right: 27px;
-    top: 2px;
+    right: 28px;
+    top: -1.5px;
     bottom: 3px;
      position: relative;
     
@@ -247,8 +358,9 @@ margin-top: 15px;
 }
 .heart1:hover {
   opacity: 1;       
-  background-color: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  animation: heart 3s ;
+  background: -webkit-linear-gradient(#FF79DA,#9356DC );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  animation: heart 3s ;
 
 }
 @keyframes heart {
@@ -281,7 +393,6 @@ margin-top: 15px;
 .cont
 {
     @include centercolumn;
-    border: 2px solid red;
 
 }
 .allcases
@@ -301,19 +412,16 @@ flex-direction: row;
 .header-container
 {
     width:100%;
-    border: 2px solid green;
 }
 body
 {
         width:100%;
-            border: 2px solid red;
 
 
 }
 #mapage
 {
            width:100%;
-               border: 2px solid blue;
                padding: 0;
                margin: 0;
 

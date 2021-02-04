@@ -4,8 +4,102 @@ $padding30:15px;
 #mapage
 {
     height: auto;
-    border: 1px solid green;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0,0,0,.25);
+
+
 }
+
+.cont1 {
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 15px;
+    overflow: hidden;
+    width: 380px;
+  }
+  
+  .fa-check-circle {
+    color: white;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    transform: rotate(180deg);
+    justify-content: center;
+  }
+  
+  .prix {
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .cont1__titlecase {
+    flex-grow: 1;
+    width: 5em;
+    padding: 10px;
+  }
+  
+  .cont1__titlecase h3 {
+    font-size: 17px;
+    font-family: "Roboto";
+    font-weight: 600;
+    color: black;
+    padding: 10px 0 5px 10px;
+    text-align: start;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  
+  .container {
+    display: flex;
+    width: 80px;
+    height: 84px;
+    margin-right: -84px;
+    transition: all 1s;
+    background-color: #99e2d0;
+  }
+  
+  .container .check {
+    margin: auto;
+    border-radius: 50%;
+    transition: transform 1s;
+    transform: rotate(0deg);
+  }
+  
+  .cont1:hover > .container .check {
+    transform: rotate(180deg);
+  }
+  
+  .cont1:hover > .container {
+    margin-right: 0;
+    width: 80px;
+    height: 84px;
+    transition-duration: 0.5s;
+  }
+  
+
+
+h3{
+    color: black;
+    font-weight: 900;
+    margin: 0;
+  }
+  
+  h4 {
+    font-size: 16px;
+    font-family: "Roboto";
+    font-weight: 400;
+    margin: 0;
+    padding: 0 0 10px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  
+  
     body
     {
         @include centerrow;
@@ -13,9 +107,10 @@ $padding30:15px;
 
         
     }
+    
 
     .images1 {
-        width: 400px;
+        width: 430px;
         height: 140px;
         -o-object-fit: cover;
            object-fit: cover;
@@ -31,7 +126,6 @@ $padding30:15px;
 }
     .header-container__conteneurlogo
     {
-   border: 1px solid red;
    display: flex;
    align-self: center;
    margin-right: 25%;
@@ -83,10 +177,13 @@ ul li
 .section1
 {
     @include centercolumn;
+    position: relative;
+    bottom: 23px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
 }
 .context1
 {
-    border: 1px solid violet;
     @include row-spacebetween;
 
 
@@ -100,13 +197,12 @@ ul li
 {
     padding-top: 20px;
 
-    font-size: 29px;
+    font-size: 28px;
 }
 .Iconheart
 {
     @include row-end;
     margin-right: 30px;
-    border: 1px solid violet;
     font-size: 23px;
 }
 .text1
@@ -146,8 +242,9 @@ h3    {
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
-        margin-top: 50px;
-    }
+        margin-top: 40px;
+        margin-right: 12px;;
+   }
 }
 
 .text
@@ -207,17 +304,32 @@ justify-content: flex-end;
     color: violet;
     cursor: pointer;
     display: block;
-    font-size: 25px;
-    right: 27px;
-    bottom: 2px;
+    font-size: 30px;
+    right:29px;
+    bottom: 1px;
+    top: 1px;
      position: relative;
      opacity: 0;
     }
     .heart1:hover {
         opacity: 1;       
-        background-color: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-        animation: heart 4s ;
+        background: -webkit-linear-gradient(#9356DC, #FF79DA );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  animation: heart 3s ;
       
+      }
+      @keyframes heart {
+        0% {
+          opacity: 0.5;
+        }
+        60%{
+          opacity: 1;
+      
+      
+        }
+        100%{
+          opacity: 2;
+        }
       }
 @keyframes translation {
     from{
@@ -235,10 +347,7 @@ transform: translateY(100px);opacity: 0;    }
     margin: 20px;
     display: block;
     
-h3    {
-    font-family: 'Shrikhand', cursive;
 
-    }
 }
 .cont1
 {
@@ -248,19 +357,16 @@ h3    {
 
 .containercont1
 {
-  border: 2px solid greenyellow;
   @include centercolumn;
 
 }
 .containercont2
 {
-    border: 2px solid greenyellow;
     @include centercolumn;
 
 }
 .containercont3
 {
-    border: 2px solid greenyellow;
     @include centercolumn;
 
 
@@ -271,7 +377,6 @@ h3    {
 
 .all
 {
-  border: 3px solid orange;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -290,24 +395,40 @@ body
 }
 .cont1
 {
-  width: 400px;
+  width: 380px;
   }
 span{
   display: block;
   margin: 10px;
-}
-.containercont1
-{
-  border: 2px solid greenyellow;
-}
-.containercont2
-{
-    border: 2px solid greenyellow;
-
-}
-.containercont3
-{
-    border: 2px solid greenyellow;
-
-}
+}  
+  .text {
+    border-bottom: 2px solid      #99E2D0;
+    width: 30px;
+    margin: 15px;
+    margin-top: 21px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }

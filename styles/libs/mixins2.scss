@@ -44,12 +44,15 @@
 }
 @mixin case1menu
 {
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
-    width: 300px;
-    height: auto;
-    border-radius: 17px;
-    align-self: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 15px;
+    overflow: hidden;
+  
     
 }
 @mixin footer 
