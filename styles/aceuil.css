@@ -1,6 +1,107 @@
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 2;
+  }
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 2;
+  }
+}
+
+@-webkit-keyframes chargement {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes chargement {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes load {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes load {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@-webkit-keyframes animate {
+  0%, 40%, 100% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes animate {
+  0%, 40%, 100% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes load {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
 #mapage {
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  max-width: 100%;
 }
 
 body {
@@ -54,26 +155,8 @@ a {
           animation: chargement 4s forwards;
 }
 
-@-webkit-keyframes chargement {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-
-@keyframes chargement {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-
 .titleone {
-  background: -webkit-linear-gradient(#FF79DA, #99E2D0), #9356DC;
+  background: -webkit-linear-gradient(#FF79DA, #99E2D0), #99E2D0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 100px;
@@ -99,9 +182,10 @@ a {
 }
 
 .list {
+  position: absolute;
   width: 40px;
   height: 40px;
-  background: #ff66b3;
+  background: #FF79DA;
   margin: 0 3px;
   border-radius: 50%;
   -webkit-animation: animate 2.5s forwards;
@@ -110,80 +194,40 @@ a {
           animation-iteration-count: 8;
 }
 
-@-webkit-keyframes load {
-  0% {
-    height: 0;
-  }
-  50% {
-    height: 50px;
-  }
-  100% {
-    height: 0;
-  }
-}
-
-@keyframes load {
-  0% {
-    height: 0;
-  }
-  50% {
-    height: 50px;
-  }
-  100% {
-    height: 0;
-  }
-}
-
-@-webkit-keyframes animate {
-  0%, 40%, 100% {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-  20% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes animate {
-  0%, 40%, 100% {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-  20% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 .list:nth-child(1) {
   background: #66b3ff;
   -webkit-box-shadow: 0 0 50px #66b3ff;
           box-shadow: 0 0 50px #66b3ff;
+  bottom: 100px;
 }
 
 .list:nth-child(2) {
-  background: #ff79da;
+  background: #FF79DA;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
-  -webkit-box-shadow: 0 0 50px #ff79da;
-          box-shadow: 0 0 50px #ff79da;
+  -webkit-box-shadow: 0 0 50px #FF79DA;
+          box-shadow: 0 0 50px #FF79DA;
+  bottom: 66px;
+  left: 66px;
 }
 
 .list:nth-child(3) {
-  background: #9356dc;
+  background: #9356DC;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
-  -webkit-box-shadow: 0 0 50px #9356dc;
-          box-shadow: 0 0 50px #9356dc;
+  -webkit-box-shadow: 0 0 50px #9356DC;
+          box-shadow: 0 0 50px #9356DC;
+  left: 100px;
 }
 
 .list:nth-child(4) {
-  background: #99e2d0;
+  background: #99E2D0;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
-  -webkit-box-shadow: 0 0 50px #99e2d0;
-          box-shadow: 0 0 50px #99e2d0;
+  -webkit-box-shadow: 0 0 50px #99E2D0;
+          box-shadow: 0 0 50px #99E2D0;
+  top: 66px;
+  left: 66px;
 }
 
 .list:nth-child(5) {
@@ -192,14 +236,36 @@ a {
           animation-delay: 0.4s;
   -webkit-box-shadow: 0 0 50px #66b3ff;
           box-shadow: 0 0 50px #66b3ff;
+  top: 100px;
 }
 
 .list:nth-child(6) {
-  background: #ff79da;
+  background: #FF79DA;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
-  -webkit-box-shadow: 0 0 50px #ff79da;
-          box-shadow: 0 0 50px #ff79da;
+  -webkit-box-shadow: 0 0 50px #FF79DA;
+          box-shadow: 0 0 50px #FF79DA;
+  top: 66px;
+  right: 26px;
+}
+
+.list:nth-child(7) {
+  background: #FF79DA;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-box-shadow: 0 0 50px #FF79DA;
+          box-shadow: 0 0 50px #FF79DA;
+  right: 60px;
+}
+
+.list:nth-child(8) {
+  background: #66b3ff;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  -webkit-box-shadow: 0 0 50px #66b3ff;
+          box-shadow: 0 0 50px #66b3ff;
+  bottom: 66px;
+  right: 26px;
 }
 
 .btnG :after {
@@ -494,30 +560,6 @@ footer a {
           animation: heart 3s;
 }
 
-@-webkit-keyframes heart {
-  0% {
-    opacity: 0.5;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 2;
-  }
-}
-
-@keyframes heart {
-  0% {
-    opacity: 0.5;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 2;
-  }
-}
-
 .Iconheart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -626,6 +668,21 @@ footer a {
   }
   .images1 {
     width: 600px;
+  }
+  .mapage {
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .case1 {
+    width: 250px;
+  }
+  .cont {
+    width: 250px;
+  }
+  .images1 {
+    width: 250px;
   }
 }
 /*# sourceMappingURL=aceuil.css.map */

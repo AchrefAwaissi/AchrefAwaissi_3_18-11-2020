@@ -1,9 +1,17 @@
 $text1-margin:10px;
 $padding30:15px;
+$primary:#9356DC ;
+$secondry:#FF79DA ;
+$third:#99E2D0;
+
 @import"libs/mixins.scss";
+@import"libs/keyframesaceuil.scss";
+
+
 #mapage
 {
     box-shadow: 0.25rem 0.25rem 10px rgba(0,0,0,.25);
+    max-width: 100%;
 
 }
 body
@@ -40,16 +48,9 @@ a{
   animation: chargement 4s forwards;
 }
 
-@keyframes chargement {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
+
 .titleone{
-  background: -webkit-linear-gradient(#FF79DA ,#99E2D0),#9356DC;
+  background: -webkit-linear-gradient($secondry,$third),$third;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 100px;
@@ -69,73 +70,73 @@ font-family: 'Shrikhand', cursive;
 }
 
 .list {
+  position: absolute;
   width: 40px;
   height: 40px;
-  background: #ff66b3;
+  background: $secondry;
   margin: 0 3px;
   border-radius: 50%;
   animation: animate 2.5s forwards;
   animation-iteration-count: 8;
 }
-
-
-@keyframes load {
-  0% {
-    height: 0;
-  }
-  50% {
-    height: 50px;
-  }
-  100% {
-    height: 0;
-  }
-}
-@keyframes animate {
-  0%,40%,100%
-   {
-transform: scale(0.2);}
-  20% {
-transform: scale(1);  }
-
-}
 .list:nth-child(1) {
   background: #66b3ff;
   box-shadow: 0 0 50px #66b3ff; 
+  bottom: 100px;
 }
-
 .list:nth-child(2) {
-  background: #ff79da;
+  background: $secondry;
   animation-delay: 0.1s;
-    box-shadow: 0 0 50px #ff79da; 
-
+    box-shadow: 0 0 50px $secondry; 
+    bottom: 66px;
+  left: 66px;
 }
-
 .list:nth-child(3) {
-  background: #9356dc;
+  background: $primary;
   animation-delay: 0.2s;
-      box-shadow: 0 0 50px #9356dc; 
+      box-shadow: 0 0 50px $primary; 
+      left: 100px;
 
 }
 
 .list:nth-child(4) {
-  background: #99e2d0;
+  background: $third;
   animation-delay: 0.3s;
-        box-shadow: 0 0 50px #99e2d0; 
+        box-shadow: 0 0 50px $third;
+        top: 66px;
+        left: 66px; 
 
 }
 
 .list:nth-child(5) {
   background: #66b3ff;
   animation-delay: 0.4s;
-          box-shadow: 0 0 50px #66b3ff; 
+          box-shadow: 0 0 50px #66b3ff;
+          top: 100px; 
 
 }
 
 .list:nth-child(6) {
-  background: #ff79da;
+  background: $secondry;
   animation-delay: 0.5s;
-            box-shadow: 0 0 50px #ff79da; 
+            box-shadow: 0 0 50px $secondry; 
+            top: 66px;
+            right: 26px;
 
+}
+.list:nth-child(7) {
+  background:$secondry;
+  animation-delay: 0.6s;
+            box-shadow: 0 0 50px $secondry; 
+            right: 60px;
+
+}
+.list:nth-child(8) {
+  background: #66b3ff;
+  animation-delay: 0.7s;
+  box-shadow: 0 0 50px #66b3ff;
+  bottom: 66px;
+  right: 26px;
 }
 
 
@@ -162,7 +163,7 @@ transform: scale(1);  }
 .btn1
 {
     border: none;
-    background-color: #99E2D0;
+    background-color: $third;
     
 }
 
@@ -214,7 +215,7 @@ transform: scale(1);  }
         position: absolute;
         top: 1.2rem;
  right: 21rem;
- background-color: #9356DC ;
+ background-color: $primary ;
  width: 20px;
  height: 20px;
  border-radius: 50%; 
@@ -237,7 +238,7 @@ transform: scale(1);  }
          }
 .ICON:hover
 {
-color: #9356DC;
+color: $primary;
 }
      }
      .cont__Menu
@@ -358,24 +359,12 @@ margin-top: 15px;
 }
 .heart1:hover {
   opacity: 1;       
-  background: -webkit-linear-gradient(#FF79DA,#9356DC );
+  background: -webkit-linear-gradient($secondry,$primary );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;  animation: heart 3s ;
 
 }
-@keyframes heart {
-  0% {
-    opacity: 0.5;
-  }
-  60%{
-    opacity: 1;
 
-
-  }
-  100%{
-    opacity: 2;
-  }
-}
 .Iconheart
 {
     @include row-end;
@@ -449,4 +438,23 @@ width: 600px;
 {
 width: 600px;
 }
+.mapage
+{
+   max-width: 100%;
+ }
 }
+@media all and (max-width: 380px) 
+{
+    .case1{
+width: 250px;
+}
+.cont {
+
+width: 250px;
+}
+.images1{
+    width: 250px;
+}
+}
+
+

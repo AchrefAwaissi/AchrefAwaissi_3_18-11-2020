@@ -1,15 +1,12 @@
 $padding30:15px;
-
 @import"libs/mixins2.scss";
 @import"libs/keyframes.scss";
-
 #mapage
 {
     height: auto;
     box-shadow: 0.25rem 0.25rem 10px rgba(0,0,0,.25);
-
-
 }
+
 
 .cont1 {
    @include cont1;
@@ -104,6 +101,7 @@ h3{
     align-items: center;
     align-self: center;
 }
+
 #bouttonpreview
 {
     background-color: white;
@@ -113,6 +111,9 @@ h3{
     border: none;
     font-size: 1em;
     cursor: pointer;
+}
+.containercont2{
+
 }
 
 footer
@@ -258,6 +259,7 @@ h3    {
 .containercont1
 {
   @include centercolumn;
+  padding-top: 100px;
 
 }
 .containercont2
@@ -280,6 +282,7 @@ h3    {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
 }
 body
 {
@@ -307,41 +310,28 @@ span{
     margin: 15px;
     margin-top: 21px;
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
-@media all and (max-width: 380px) 
-{
-.cont1
-{
-width: 300px;
-}
-.images1
-{
-    width: 100%;
-}
-#mapage
-{
-  width: 100%;
-}
-}
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  

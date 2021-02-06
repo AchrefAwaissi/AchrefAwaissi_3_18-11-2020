@@ -186,6 +186,7 @@ body {
   width: 211px;
   height: 46px;
   padding-top: 20px;
+  border: 2px solid green;
   margin-right: 200px;
 }
 
@@ -485,6 +486,7 @@ footer a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 100px;
 }
 
 .containercont2 {
@@ -547,16 +549,4 @@ footer a {
     margin-top: 21px;
   }
 }
-
-@media all and (max-width: 380px) {
-  .cont1 {
-    width: 300px;
-  }
-  .images1 {
-    width: 100%;
-  }
-  #mapage {
-    width: 100%;
-  }
-}
-/*# sourceMappingURL=menu1.css.map */
+/*# sourceMappingURL=menu2.css.map */

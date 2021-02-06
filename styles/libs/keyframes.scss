@@ -1,0 +1,24 @@
+@keyframes heart {
+    0% {
+      opacity: 0.5;
+    }
+    60%{
+      opacity: 1;
+  
+  
+    }
+    100%{
+      opacity: 2;
+    }
+  }
+  @keyframes translation {
+    from{
+transform: translateY(100px);opacity: 0;    }
+    to {
+        
+        opacity:1;
+        transform: translateY(0);
+
+
+    }
+}
