@@ -3,6 +3,11 @@ $padding30:15px;
 $primary:#9356DC ;
 $secondry:#FF79DA ;
 $third:#99E2D0;
+$heart-size:29px;
+$width:600px;
+$width-peitit-ecran:250px;
+$width-full-screen:100%;
+
 
 @import"libs/mixins.scss";
 @import"libs/keyframesaceuil.scss";
@@ -339,7 +344,7 @@ margin-top: 15px;
 .heart1
 {
     padding-top: 20px;
-    font-size: 29px;
+    font-size: $heart-size;
     
 }
 .heart1
@@ -347,7 +352,7 @@ margin-top: 15px;
   color: violet;
   cursor: pointer;
   display: block;
-    font-size: 29px;
+    font-size: $heart-size;
     opacity: 0;
     right: 28px;
     top: -1.5px;
@@ -393,24 +398,22 @@ margin-top: 15px;
 {
 .cont
 {
-display: flex;
-justify-content: center;
-flex-direction: row;
+@include centerrow;
 }
 
 .header-container
 {
-    width:100%;
+    width:$width-full-screen;
 }
 body
 {
-        width:100%;
+        width:$width-full-screen;
 
 
 }
 #mapage
 {
-           width:100%;
+           width:$width-full-screen;
                padding: 0;
                margin: 0;
 
@@ -418,42 +421,36 @@ body
 }
 .section1
 {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+	@include startcolumn;
 }
 .allcases{
-     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 5px;
+   @include allcases;
 
 }
 .case1
 {
-width: 600px;
+width: $width;
 }
 .images1
 {
-width: 600px;
+width:$width;
 }
 .mapage
 {
-   max-width: 100%;
+   max-width: $width-full-screen;
  }
 }
 @media all and (max-width: 380px) 
 {
     .case1{
-width: 250px;
+width:$width-peitit-ecran;
 }
 .cont {
 
-width: 250px;
+width:$width-peitit-ecran;
 }
 .images1{
-    width: 250px;
+    width:$width-peitit-ecran;
 }
 }
 

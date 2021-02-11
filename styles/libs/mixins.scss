@@ -3,6 +3,11 @@
     flex-direction: column;
     justify-content: center;  
 }
+@mixin startcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  
+}
 @mixin centerrow {
     display: flex;
     flex-direction: row;
@@ -43,6 +48,14 @@
     margin-bottom: 10px; 
     transition-property: transform;
     transition-duration: 400ms;   
+}
+@mixin allcases
+ {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5px;
 }
 @mixin case1menu
 {
