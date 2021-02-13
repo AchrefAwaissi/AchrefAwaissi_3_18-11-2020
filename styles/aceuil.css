@@ -99,9 +99,10 @@
 }
 
 #mapage {
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -118,11 +119,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  margin: 0;
 }
 
 .images1 {
-  width: 300px;
-  height: 130px;
+  height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-right-radius: 17px;
@@ -611,6 +613,8 @@ footer a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media all and (min-width: 980px) {
@@ -625,6 +629,8 @@ footer a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .header-container {
     width: 100%;
@@ -674,15 +680,118 @@ footer a {
   }
 }
 
-@media all and (max-width: 380px) {
+@media all and (max-width: 480px) {
+  .header-container__logo1 {
+    width: 120px;
+    height: 34px;
+  }
+  .h1, .P {
+    word-wrap: break-word;
+  }
   .case1 {
     width: 250px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .cont {
-    width: 250px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .images1 {
     width: 250px;
+  }
+  #mapage {
+    width: 320px;
+    margin: 0;
+    max-width: 100%;
+  }
+  .cont__Restaurent__number {
+    left: -1rem;
+  }
+  .cont__Restaurant__mobile, .cont__Menu__menu1, .cont__Degustez__menu1 {
+    width: 220px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .cont__Menu__menu1 {
+    width: 220px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .cont__Degustez__menu1 {
+    width: 220px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .titleone {
+    font-size: 38px;
+  }
+  .loading {
+    display: inline;
+  }
+}
+
+@media (man-width: 190px) {
+  .cont__Restaurent__number {
+    left: -1rem;
+  }
+  .cont__Restaurant__mobile, .cont__Menu__menu1, .cont__Degustez__menu1 {
+    width: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .cont__Menu__menu1 {
+    width: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .cont__Degustez__menu1 {
+    width: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  footer {
+    width: auto;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 980px) {
+  .case1 {
+    width: auto;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: auto;
   }
 }
 /*# sourceMappingURL=aceuil.css.map */
