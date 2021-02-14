@@ -8,18 +8,14 @@ $width:600px;
 $width-peitit-ecran250:250px;
 $width220:220px;
 $width-full-screen:100%;
-
-
 @import"libs/mixins.scss";
 @import"libs/keyframesaceuil.scss";
-
-
 #mapage
 {
-    max-width: $width-full-screen; width: 100%;
+    max-width: $width-full-screen; 
     margin: 0;
     padding: 0;
-
+    max-width: 1280px;
 }
 body
 {
@@ -27,7 +23,7 @@ body
         display: flex;
         width: auto;
 @include centerrow;
-    width: 100%;
+    width: $width-full-screen;
     margin: 0;
 }
 .images1 {
@@ -56,8 +52,6 @@ a{
   background: white;
   animation: chargement 4s forwards;
 }
-
-
 .titleone{
   background: -webkit-linear-gradient($secondry,$third),$third;
   -webkit-background-clip: text;
@@ -77,7 +71,6 @@ font-family: 'Shrikhand', cursive;
   display: flex;
   align-items: center;
 }
-
 .list {
   position: absolute;
   width: 40px;
@@ -105,7 +98,6 @@ font-family: 'Shrikhand', cursive;
   animation-delay: 0.2s;
       box-shadow: 0 0 50px $primary; 
       left: 100px;
-
 }
 
 .list:nth-child(4) {
@@ -116,13 +108,11 @@ font-family: 'Shrikhand', cursive;
         left: 66px; 
 
 }
-
 .list:nth-child(5) {
   background: #66b3ff;
   animation-delay: 0.4s;
           box-shadow: 0 0 50px #66b3ff;
           top: 100px; 
-
 }
 
 .list:nth-child(6) {
@@ -138,7 +128,6 @@ font-family: 'Shrikhand', cursive;
   animation-delay: 0.6s;
             box-shadow: 0 0 50px $secondry; 
             right: 60px;
-
 }
 .list:nth-child(8) {
   background: #66b3ff;
@@ -162,18 +151,15 @@ font-family: 'Shrikhand', cursive;
     .btnG:hover {
     background-color: #f7c2f9;
     }
-    
     .btnG:hover  {
     opacity: 2;
     right: 0;
     box-shadow: 0 0px 15px rgba(0, 0, 0, .2);
-
     }
 .btn1
 {
     border: none;
-    background-color: $third;
-    
+    background-color: $third; 
 }
 
 .header-container
@@ -192,18 +178,13 @@ font-family: 'Shrikhand', cursive;
     .btnG:hover
     {
         filter: brightness(1.5);
-
     }
-   
-
 }
-
 .resto-search
 {
     @include centerrow;
     background-color: rgb(233, 229, 229);
     padding:$padding30;
-
   &__map
    {
     margin-right: 20px;   
@@ -213,16 +194,14 @@ font-family: 'Shrikhand', cursive;
    {
     @include centerrow;
     }
-    
      .cont__Restaurant
      {
          align-self: center;
-
      }
      .cont__Restaurent__number
      {
-        position: absolute;
-        top: 1.2rem;
+ position: absolute;
+ top: 1.2rem;
  right: 21rem;
  background-color: $primary ;
  width: 20px;
@@ -232,15 +211,11 @@ font-family: 'Shrikhand', cursive;
  align-items: center;
  justify-content: center;
  border: none; 
-
      }
      .cont__Restaurant__mobile
      {
         @include cont__Restaurant__mobile;
         position: relative;
-
-         
-
          .texte1
          {
              margin-left:$text1-margin;
@@ -252,14 +227,11 @@ color: $primary;
      }
      .cont__Menu
      {
-         @extend .cont__Restaurant
-         
-         
+         @extend .cont__Restaurant     
      }
      .cont__Degustez
      {
         @extend .cont__Restaurant
-
      }
     .cont__Menu__menu1
     {
@@ -267,8 +239,7 @@ color: $primary;
         .p1
         {
             margin-left:$text1-margin;
-        }
-        
+        }   
     }
     .cont__Degustez__menu1
     {
@@ -285,9 +256,6 @@ color: $primary;
      .case1
      {
     @include case1;
-
-
-  
      }
      footer
      {
@@ -296,7 +264,6 @@ color: $primary;
          padding-bottom: 0;
      .foot
 {
-  
 font-family: 'Shrikhand', cursive;
 margin-left: 37px;
 display: block;
@@ -331,26 +298,20 @@ margin-top: 15px;
 .context1
 {
     @include row-spacebetween;
-
-
 .context1__text2
 {
     margin-left: 10px;
-
 }
 }
 .heart
 {
     padding-top: 20px;
-    font-size: 27px;
-
-    
+    font-size: 27px;   
 }
 .heart1
 {
     padding-top: 20px;
-    font-size: $heart-size;
-    
+    font-size: $heart-size;    
 }
 .heart1
 {
@@ -363,9 +324,6 @@ margin-top: 15px;
     top: -1.5px;
     bottom: 3px;
      position: relative;
-    
-
-
 }
 .heart1:hover {
   opacity: 1;       
@@ -374,7 +332,6 @@ margin-top: 15px;
   -webkit-text-fill-color: transparent;  animation: heart 3s ;
 
 }
-
 .Iconheart
 {
     @include row-end;
@@ -392,8 +349,6 @@ margin-top: 15px;
 .cont
 {
     @include centercolumn;
-
-
 }
 .allcases
 {
@@ -407,9 +362,7 @@ margin-top: 15px;
 {
 @include centerrow;
 flex-wrap: wrap;
-
 }
-
 .header-container
 {
     width:$width-full-screen;
@@ -423,8 +376,6 @@ body
            width:$width-full-screen;
                padding: 0;
                margin: 0;
-
- 
 }
 .section1
 {
@@ -432,7 +383,6 @@ body
 }
 .allcases{
    @include allcases;
-
 }
 .case1
 {
@@ -458,7 +408,6 @@ width:$width;
     {
         word-wrap:break-word;
     }
-  
     .case1{
 width:$width-peitit-ecran250;
 align-self: flex-start;
@@ -478,11 +427,9 @@ align-items: center;
 }
 #mapage
 {
-    width: 320px;
-    margin: 0;
-
-       max-width: 100%;
-
+width: 320px;
+margin: 0;
+ max-width:$width-full-screen;
 }
 .cont__Restaurent__number
 {
@@ -535,9 +482,7 @@ align-items: center;
 footer{
     width: auto;
 }
-
 }
-
 @media (min-width: 390px) and (max-width: 980px) { 
     .case1{
         width:60%;
@@ -556,6 +501,6 @@ footer{
     width:90%;
 }
 .images1{
-    width: 100%;
+    width:$width-full-screen;
 }
 }

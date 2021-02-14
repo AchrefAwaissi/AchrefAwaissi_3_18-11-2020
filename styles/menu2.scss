@@ -1,8 +1,20 @@
 $padding30:15px;
+$text1-margin:10px;
+$padding30:15px;
+$primary:#9356DC ;
+$secondry:#FF79DA ;
+$third:#99E2D0;
+$heart-size:23px;
+$width:600px;
+$width-peitit-ecran250:250px;
+$width220:220px;
+$heightimage450:450px;
+$width-full-screen:100%;
 @import"libs/mixins2.scss";
 @import"libs/keyframes.scss";
 #mapage
 {
+  max-width: 1280px;
     height: auto;
     margin: 0;
 padding: 0;
@@ -11,76 +23,53 @@ padding: 0;
 {
   margin-top: 20px;
 }
-
-
 .cont1 {
    @include cont1;
   }
-  
   .fa-check-circle {
     @include check;
-   
   }
-  
   .prix {
     padding: 10px;
     font-weight: bold;
   }
-  
   .cont1__titlecase {
     @include titlecasecont1;
   }
-  
   .cont1__titlecase h3 {
   @include cont1h3;
   }
-  
-  
   .container {
     @include container;
   }
-  
   .container .check {
     margin: auto;
     border-radius: 50%;
     transition: transform 1s;
     transform: rotate(0deg);
   }
-  
   .cont1:hover > .container .check {
     transform: rotate(180deg);
   }
-  
   .cont1:hover > .container {
     margin-right: 0;
     width: 80px;
     height: 84px;
     transition-duration: 0.5s;
   }
-  
-
-
 h3{
     color: black;
     font-weight: 900;
     margin: 0;
   }
-  
   h4 {
    @include h4;
   }
-  
-  
-  
     body
     {
         @include centerrow;
-        font-family: "Roboto",sans-serif;
-
-        
+        font-family: "Roboto",sans-serif;  
     }
-    
-
     .images1 {
      @include images1;
       }
@@ -88,7 +77,6 @@ h3{
 {
  @include logo1;
  margin-right:200px;
-
 }
     .header-container__conteneurlogo
     {
@@ -106,7 +94,6 @@ h3{
     align-items: center;
     align-self: center;
 }
-
 #bouttonpreview
 {
     background-color: white;
@@ -117,10 +104,6 @@ h3{
     font-size: 1em;
     cursor: pointer;
 }
-.containercont2{
-
-}
-
 footer
 {
     @include footer;
@@ -132,7 +115,6 @@ ul li
 {
     list-style-type: none;
     padding: 3px;
-
 }
     a
    {
@@ -151,8 +133,6 @@ ul li
 .context1
 {
     @include row-spacebetween;
-
-
 .context1__text2
 {
     margin-left: 10px;
@@ -183,32 +163,23 @@ h3    {
 .section1
 {
 @include section1;
-
     }
-
 .cont1
 {
- 
     @include row-spacebetween;
     @include case1menu;
     margin-bottom: 10px;
     animation: translation 3s;
     transition-duration: 300ms;   
-
-    
-
     .cont1__titlecase
     {
      margin-left: 10px;   
- 
-
     }
     .cont1__prix1
     {
 @include prixcont1;
    }
 }
-
 .text
 {
    @include textdemenu
@@ -218,13 +189,9 @@ h3    {
  @include centerrow;
 @include boutton2;
     }
-    
- 
- 
  .btn
 {
-    @include btn;
-    
+    @include btn;   
 }
 .heart1
 {
@@ -241,47 +208,35 @@ h3    {
     }
     .heart1:hover {
         opacity: 1;       
-        background: -webkit-linear-gradient(#9356DC, #FF79DA );
+        background: -webkit-linear-gradient($primary,$secondry );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;  animation: heart 3s ;
-      
       }
-   
-
 .text
 {
     margin: 20px;
     display: block;
-    
-
 }
 .cont1
 {
     align-items: center;
     align-self: center;
 }
-
 .containercont1
 {
   @include centercolumn;
   padding-top: 100px;
-
 }
 .containercont2
 {
     @include centercolumn;
-
 }
 .containercont3
 {
     @include centercolumn;
-
-
 }
-
 @media all and (min-width: 980px) 
 {
-
 .all
 {
   display: flex;
@@ -290,17 +245,16 @@ h3    {
 }
 body
 {
-  width: 100%;
+  width: $width-full-screen;
 }
 #mapage
 {
-  width: 100%
+  width: $width-full-screen;
 }
 .images1
 {
-  width: 100%;
-  height: 450px;
-
+  width: $width-full-screen;
+  height:$heightimage450;
 }
 .cont1
 {
@@ -311,15 +265,12 @@ span{
   margin: 10px;
 }  
   .text {
-    border-bottom: 2px solid      #99E2D0;
+    border-bottom: 2px solid      $third;
     width: 30px;
     margin: 15px;
     margin-top: 21px;
-  }  
-  
+  }   
 }
-
-  
 @media all and (min-width: 480px) and(max-width:980px)
 {
   body{padding: 0;
@@ -329,22 +280,20 @@ span{
   {
     padding: 0;
     margin: 0;
-    width: 100%;
+    width: $width-full-screen;
   }
   .cont1
   {
     width: 80%;
   }
   .all{
-    width:100%;
+    width:$width-full-screen;
   }
   .images1
   {
-    width:100%;
-    height: 450px;
-
+    width:$width-full-screen;
+    height:$heightimage450;
   }
-
 }
 @media all and (min-width: 380px)and   (max-width: 480px)
 {
@@ -355,22 +304,20 @@ span{
     {
       padding: 0;
       margin: 0;
-      width: 100%;
+      width: $width-full-screen;
     }
     .cont1
     {
       width: 80%;
     }
     .all{
-      width:100%;
+      width:$width-full-screen;
     }
     .images1
     {
-      width:100%;
-      height: 450px;
-
-}
-}
+      width:$width-full-screen;
+      height:$heightimage450;
+}}
 @media all and (max-width: 380px) 
 {
   .header-container__logo1    {
@@ -382,7 +329,7 @@ span{
     width: 320px;
     margin: 0;
     padding: 0;
-     max-width: 100%;
+     max-width: $width-full-screen;
 
 }
 .cont1
@@ -390,18 +337,17 @@ span{
 width: 80%;
 }
 body{
- width: 100%;
+ width: $width-full-screen;
   align-items: center;
   align-self:center;
 }
 .images1
 {
-  width:100%;
-
+  width:$width-full-screen;
 }
 .section1
 {
-  width: 100%;
+  width: $width-full-screen;
 }
 }
 
