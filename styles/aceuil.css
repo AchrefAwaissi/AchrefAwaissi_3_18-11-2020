@@ -776,9 +776,24 @@ footer a {
 
 @media (min-width: 390px) and (max-width: 980px) {
   .case1 {
-    width: auto;
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    width: 60%;
+  }
+  .allcases {
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .cont {
     display: -webkit-box;
@@ -791,7 +806,10 @@ footer a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: auto;
+    width: 90%;
+  }
+  .images1 {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=aceuil.css.map */

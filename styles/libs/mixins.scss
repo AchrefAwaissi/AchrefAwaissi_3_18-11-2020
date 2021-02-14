@@ -13,6 +13,21 @@
     flex-direction: row;
     justify-content: center;  
 }
+@mixin foot {
+    font-family: 'Shrikhand', cursive;
+margin-left: 37px;
+display: block;
+margin-top: 15px;
+    
+}
+@mixin footer 
+{
+    background-color: rgb(43, 42, 42);
+    color: white;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
+}
 @mixin row-end {
     display: flex;
     flex-direction: row;
@@ -39,7 +54,7 @@
 @mixin case1 
 {
     background-color: white;
-    width:auto;
+    width: 300px;
     height: auto;
     border-radius: 17px;
     align-items: center;

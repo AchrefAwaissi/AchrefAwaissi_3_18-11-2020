@@ -540,15 +540,22 @@ footer{
 
 @media (min-width: 390px) and (max-width: 980px) { 
     .case1{
-        width:auto;
-        align-self: flex-start;
+        width:60%;
         }
-
+        .allcases
+        {
+            align-self:center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
 .cont
 {
     @include centercolumn;
-    width:auto;
-
-
+    width:90%;
+}
+.images1{
+    width: 100%;
 }
 }
