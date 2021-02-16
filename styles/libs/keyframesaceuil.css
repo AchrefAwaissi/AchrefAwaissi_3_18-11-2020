@@ -85,16 +85,4 @@
             transform: scale(1);
   }
 }
-
-@keyframes load {
-  0% {
-    height: 0;
-  }
-  50% {
-    height: 50px;
-  }
-  100% {
-    height: 0;
-  }
-}
 /*# sourceMappingURL=keyframesaceuil.css.map */
