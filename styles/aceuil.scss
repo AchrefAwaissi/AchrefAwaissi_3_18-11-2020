@@ -315,7 +315,7 @@ margin-top: 15px;
 }
 .heart1
 {
-  color: violet;
+  color: $secondry;
   cursor: pointer;
   display: block;
     font-size: $heart-size;
@@ -459,7 +459,7 @@ margin: 0;
     display: inline;
 }
 }
-@media (man-width: 190px) { 
+@media (max-width: 190px) { 
     .cont__Restaurent__number
 {
     left: -1rem;
@@ -483,7 +483,7 @@ footer{
     width: auto;
 }
 }
-@media (min-width: 390px) and (max-width: 980px) { 
+@media (min-width: 480px) and (max-width: 980px) { 
     .case1{
         width:60%;
         }
